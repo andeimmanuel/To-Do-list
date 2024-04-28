@@ -3,40 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My To-Do list</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Login Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <header>
-      <h1>My To do List</h1>
-      <form id="new-task">
-        <input
-          type="text"
-          name="content"
-          id="task-input"
-          placeholder="Enter your Task"
-        />
-        <input type="submit" id="submit-btn" value="Add Task" />
-      </form>
-    </header>
+    <section>
+      <div id="container">
+        <header>
+          <img src="./Image/logo-removebg-preview.png" class="logo" />
+          <h2>Welcome to <b>Infinity TO DO list</b></h2>
+          <h4>Let our to-do list guide you to success</h4>
+        </header>
 
-    <main>
-      <section class="task-list">
-        <h2>Tasks</h2>
-
-        <div id="task">
-          <!-- <div class="task">
-            <div class="content">
-              <input type="text" class="para" value="My" readonly />
+        <main>
+          <form
+            class="login-form"
+            method="post"
+            name="form"
+            action="todo.html"
+            onsubmit="return validated()"
+          >
+            <div class="container">
+              <div class="group">
+                <i class="ri-mail-line" id="icon"></i>
+                <input
+                  class="input"
+                  autocomplete="off"
+                  name="email"
+                  type="email"
+                  placeholder="Email Address"
+                />
+              </div>
+              <div id="email-error">Please Enter a Valid Email</div>
+              <div class="group">
+                <i class="ri-lock-line" id="icon"></i>
+                <input
+                  class="input"
+                  name="password"
+                  type="password"
+                  placeholder="password"
+                />
+              </div>
+              <div id="pass-error">Enter a correct Password</div>
             </div>
+
             <div class="actions">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
+              <a class="forgot" href="#">Forgot your password? </a>
+              <button id="login" type="submit">
+                <span class="transition"></span>
+                <span class="gradient"></span>
+                <span class="label">Continue</span>
+              </button>
             </div>
-          </div> -->
-        </div>
-      </section>
-    </main>
-    <script src="main.js"></script>
+          </form>
+        </main>
+      </div>
+
+      <img src="./Image/pexels-tara-winstead-6690932.jpg" class="img" />
+    </section>
+    <script src="./Js/login.js"></script>
   </body>
 </html>
