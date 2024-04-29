@@ -24,18 +24,12 @@
         </header>
 
         <main>
-          <form
-            class="login-form"
-            method="post"
-            name="form"
-            action="todo.html"
-            onsubmit="return validated()"
-          >
+          <form class="login-form" name="form" onsubmit="validated()">
             <div class="container">
               <div class="group">
                 <i class="ri-mail-line" id="icon"></i>
                 <input
-                  class="input"
+                  class="input useremail"
                   autocomplete="off"
                   name="email"
                   type="email"
@@ -46,7 +40,7 @@
               <div class="group">
                 <i class="ri-lock-line" id="icon"></i>
                 <input
-                  class="input"
+                  class="input userpassword"
                   name="password"
                   type="password"
                   placeholder="password"
@@ -55,9 +49,9 @@
               <div id="pass-error">Enter a correct Password</div>
             </div>
 
-            <div class="actions">
+            <div class="actions" id="subm">
               <a class="forgot" href="#">Forgot your password? </a>
-              <button id="login" type="submit">
+              <button id="login" type="submit" class="submitBtn">
                 <span class="transition"></span>
                 <span class="gradient"></span>
                 <span class="label">Continue</span>
@@ -69,6 +63,6 @@
 
       <img src="./Image/pexels-tara-winstead-6690932.jpg" class="img" />
     </section>
-    <script src="./Js/login.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>

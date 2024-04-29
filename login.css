@@ -16,12 +16,14 @@ section {
   gap: 10px;
   background-color: #eff7f6;
   border-radius: 1rem;
-  box-shadow: inset(0 0 0 0px rgba(255, 255, 255, 0.5));
 }
 
 #container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 60%;
-  padding: 50px 10px;
+  padding: 50px 15px;
 }
 
 header h2 {
@@ -113,6 +115,7 @@ input:hover {
   font-size: small;
   color: #7747ff;
   text-align: right;
+  margin-top: 1rem;
 }
 
 #login {
@@ -168,4 +171,31 @@ button:hover .transition {
 
 button:active {
   transform: scale(0.97);
+}
+
+.error {
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 426px) {
+  section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .img {
+    /* display: none; */
+    width: 100%;
+    height: 35dvh;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  #container {
+    width: 100%;
+    padding: 50px 15px;
+  }
+
+  header h2 {
+    font-size: 1.35rem;
+  }
 }

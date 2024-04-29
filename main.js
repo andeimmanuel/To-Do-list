@@ -83,7 +83,7 @@ window.addEventListener("load", () => {
     const todo = {
       content: task,
       done: false,
-      createdAt: new Date().toISOString(), // Corrected: new Date() instead of new Data()
+      createdAt: new Date().toISOString(),
     };
 
     todos.push(todo);
